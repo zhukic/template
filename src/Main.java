@@ -7,9 +7,9 @@ public class Main {
 
         final Input input = new Input(System.in);
 
-        final Input.Args arguments = input.getArgs();
+        final Args arguments = input.getArgs();
 
-        final Algorithm algorithm = new Algorithm();
+        final Algorithm algorithm = new Algorithm(arguments);
 
         System.out.println(algorithm.getResult());
 
@@ -28,15 +28,15 @@ public class Main {
             return new Args();
         }
 
-        public static class Args {
+    }
 
-        }
+    public static class Args {
 
     }
 
     public static class Algorithm {
 
-        public Algorithm() {}
+        public Algorithm(Args args) {}
 
         public int getResult() {
             return 0;
